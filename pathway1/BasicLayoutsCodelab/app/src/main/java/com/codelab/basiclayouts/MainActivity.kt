@@ -103,7 +103,7 @@ fun AlignYourBodyElement(
         )
         Text(
             text = stringResource(text),
-            style = MaterialTheme.typography.h3,
+            style = MaterialTheme.typography.body1,
             modifier = Modifier.paddingFromBaseline(
                 top = 24.dp, bottom = 8.dp
             )
@@ -134,7 +134,7 @@ fun FavoriteCollectionCard(
             )
             Text(
                 text = stringResource(text),
-                style = MaterialTheme.typography.h3,
+                style = MaterialTheme.typography.body2,
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
         }
@@ -148,7 +148,7 @@ fun AlignYourBodyRow(
 ) {
     LazyRow(
         horizontalArrangement = Arrangement.spacedBy(8.dp),
-        contentPadding = PaddingValues(horizontal = 16.dp),
+        contentPadding = PaddingValues(16.dp),
         modifier = modifier
     ) {
         items(alignYourBodyData) { item ->
@@ -164,10 +164,10 @@ fun FavoriteCollectionsGrid(
 ) {
     LazyHorizontalGrid(
         rows = GridCells.Fixed(2),
-        contentPadding = PaddingValues(horizontal = 16.dp),
+        contentPadding = PaddingValues(16.dp),
         horizontalArrangement = Arrangement.spacedBy(8.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
-        modifier = modifier.height(120.dp)
+        modifier = modifier.height(152.dp)
     ) {
         items(favoriteCollectionsData) { item ->
             FavoriteCollectionCard(
@@ -189,7 +189,7 @@ fun HomeSection(
     Column(modifier) {
         Text(
             text = stringResource(title).uppercase(Locale.getDefault()),
-            style = MaterialTheme.typography.h2,
+            style = MaterialTheme.typography.h6,
             modifier = Modifier
                 .paddingFromBaseline(top = 40.dp, bottom = 8.dp)
                 .padding(horizontal = 16.dp)
