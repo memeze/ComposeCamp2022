@@ -258,7 +258,16 @@ private fun SootheBottomNavigation(modifier: Modifier = Modifier) {
 // Step: MySoothe App - Scaffold
 @Composable
 fun MySootheApp() {
-    // Implement composable here
+    val scrollState = rememberScrollState()
+
+    Scaffold(
+        bottomBar = { SootheBottomNavigation() }
+    ) { innerPadding ->
+        HomeScreen(
+            modifier = Modifier.padding(innerPadding),
+            scrollState = scrollState
+        )
+    }
 }
 
 private val alignYourBodyData = listOf(
